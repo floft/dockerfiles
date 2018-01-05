@@ -11,7 +11,10 @@ RUN apt-get update && apt-get install -y \
     sudo \
     psmisc \
     libopencv-dev \
-    ros-lunar-tf2-tools
+    ros-lunar-tf2-tools \
+    iproute2 iputils-ping libnss-resolve \
+    libgl1-mesa-glx libgl1-mesa-dri && \
+    rm -rf /var/lib/apt/lists/*
 
 # Add user
 RUN useradd -ms /bin/bash -g users -G sudo garrett
