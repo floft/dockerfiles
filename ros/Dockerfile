@@ -11,9 +11,16 @@ RUN apt-get update && apt-get install -y \
     sudo \
     psmisc \
     libopencv-dev \
-    ros-lunar-tf2-tools \
+    ros-lunar-tf2-tools ros-lunar-tf2-bullet \
     iproute2 iputils-ping libnss-resolve \
-    libgl1-mesa-glx libgl1-mesa-dri && \
+    libgl1-mesa-glx libgl1-mesa-dri \
+    python-pip python-numpy python-matplotlib htop \
+    jnettop protobuf-compiler python-pil python-lxml libxml2-dev \
+    libxslt1-dev python-yaml python-docutils \
+    redis-server python-redis \
+    ros-lunar-rosbridge-server ros-lunar-rosbridge-suite \
+    ros-lunar-move-base-msgs \
+    ros-lunar-rosserial ros-lunar-rosserial-arduino && \
     rm -rf /var/lib/apt/lists/*
 
 # Add user
